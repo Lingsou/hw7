@@ -1,0 +1,114 @@
+var sounds = []
+
+
+function preload() {
+  soundFormats('mp3');
+  for (var i = 0; i < 8; i++) {
+    let sound = loadSound(i + '.mp3');
+    sounds.push(sound);
+  }
+}
+
+function setup() {
+  createCanvas(400, 400);
+  colorMode(HSB)
+
+}
+
+function draw() {
+
+  if (keyIsDown(53)) {
+    fill(random(0, 220), random(0, 220), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+
+  background(0);
+
+  rect(150, 160, 90, 70); // base drum 
+  noStroke();
+
+  if (keyIsDown(54)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  stroke(5);
+  ellipse(230, 200, 50); // hanging tom 
+
+  if (keyIsDown(52)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(160, 200, 50); // rack tom 
+
+  if (keyIsDown(56)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(280, 245, 60); // floor tomm
+
+
+  if (keyIsDown(51)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(120, 255, 70); // snare drum 
+
+
+  if (keyIsDown(50)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(70, 230, 55); // high hat 
+
+
+  if (keyIsDown(49)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(100, 160, 70); // crash cymbal 
+
+  if (keyIsDown(55)) {
+    fill(random(0, 100), random(0, 100), random(0, 100))
+  } else {
+    fill(0, 0, 100)
+  }
+  ellipse(280, 160, 70); // ride symbal 
+}
+  
+  
+  function keyPressed() {
+  if (key == '1') {
+    sounds[0].play();
+  }
+  if (key == '2') {
+    sounds[1].play();
+  }
+  if (key == '3') {
+    sounds[2].play();
+  }
+  if (key == '4') {
+    sounds[3].play();
+  }
+  if (key == '5') {
+    sounds[4].play();
+  }
+  if (key == '6') {
+    sounds[5].play();
+  }
+  if (key == '7') {
+    sounds[6].play();
+  }
+  if(key == '8') {
+    sounds[7].play();
+    }
+ 
+  }
+
+
